@@ -1,4 +1,4 @@
 EuroandinoWS
 ============
 
-Servicio web euroandino
+Servicio web euroandino.

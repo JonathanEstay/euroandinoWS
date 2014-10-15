@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Proyecto : EuroandinoWS
+${licensePrefix}Autor    : Tsyacom Ltda.
+${licensePrefix}Fecha    : Miercoles, 15 de octubre de 2014
+<#if licenseLast??>
+${licenseLast}
+</#if>

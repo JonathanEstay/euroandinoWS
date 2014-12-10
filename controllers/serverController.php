@@ -15,34 +15,28 @@ class serverController extends Controller
     public function index(){}
     
     
-    public function panamericana($wsdl=false)
-    {
-        if(!$wsdl)
-        {
+    public function euroandino($wsdl = false) {
+        if (!$wsdl) {
             $this->loadController('metodosController');
-            $server = new SoapServer(ROOT . 'public' . DS . 'panamericana.wsdl');
+            $server = new SoapServer(ROOT . 'public' . DS . 'euroandino.wsdl');
             $server->setClass('metodosController');
-            
+
             /*
-            $tz = date_default_timezone_get();
-            $header = new SoapHeader('urn:pc_SOAP_return_time', 'get_timezone', $tz);
-            $server->addSoapHeader($header);
+              $tz = date_default_timezone_get();
+              $header = new SoapHeader('urn:pc_SOAP_return_time', 'get_timezone', $tz);
+              $server->addSoapHeader($header);
              */
 
-            try
-            {
+            try {
                 $server->handle();
-            }
-            catch (Exception $e)
-            {
+            } catch (Exception $e) {
                 $server->fault('Sender', $e->getMessage());
             }
-        }
-        else
-        {
-            $this->_view->renderizaWSDL('panamericana');
+        } else {
+            $this->_view->renderizaWSDL('euroandino');
         }
     }
+
 }
 
 ?>

@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * Proyecto : PanamericanaWS
+ * Proyecto : EuroandinoWS
  * Autor    : Tsyacom Ltda.
- * Fecha    : Martes, 19 de agosto de 2014
+ * Fecha    : Miercoles, 15 de octubre de 2014
  */
 
 ini_set('display_errors', 1);

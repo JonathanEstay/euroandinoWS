@@ -15,7 +15,7 @@ class indexController extends Controller
     public function index(){}
     
     
-    public function PanamericanaServer()
+    public function EuroandinoServer()
     {
         $server = new SoapServer("Oris.wsdl");
         $server->setClass("Metodos");

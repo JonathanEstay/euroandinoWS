@@ -209,13 +209,14 @@ class metodosController extends Controller
                     $mC_chd2= trim($detPRG["chd2"]);
                     $mC_inf= trim($detPRG["inf"]);
                     $mC_PF= trim($detPRG["PF"]);
+                    $mC_PxP= trim($detPRG["PxP"]);
                     
                     
                     
                     for($i=1; $i<=5; $i++)
                     {
                         $mC_codHotel= trim($detPRG["codHotel_".$i]);
-                        $mC_nombreHot= trim($detPRG["hotel_".$i]);
+                        $mC_nombreHot= mb_convert_encoding(trim($detPRG["hotel_".$i]), "UTF-8");
                         $mC_codPA= trim($detPRG["codPlanAlimenticio_".$i]);
                         $mC_PA= trim($detPRG["PlanAlimenticio_".$i]);
                         $mC_codTH= trim($detPRG["codTipoHabitacion_".$i]);
@@ -282,7 +283,8 @@ class metodosController extends Controller
                             "chd1" => $mC_chd,
                             "chd2" => $mC_chd2,
                             "inf" => $mC_inf,
-                            "PF" => $mC_PF
+                            "PF" => $mC_PF,
+                            "PxP" => $mC_PxP
                         ),
                         
                         "hoteles" => $xmlHoteles
@@ -462,6 +464,7 @@ class metodosController extends Controller
                     $MC_CodigoBloqueo= trim($args["Parametros"]->CodigoBloqueo);
                     
                     $mC_TC_vage= trim($args["Parametros"]->vage);
+                    $mC_TC_PxP= trim($args["Parametros"]->PxP);
                     
                     //exec WEB_ORIS_CREA_FILE_WS_TESTING
                     $sql="exec WEB_ORIS_CREA_FILE_WS '$MC_Id_Agen', '$MC_codUsuario', '$MC_Fecha_In_', '$MC_CodigoPrograma', '$MC_CodigoBloqueo' ";

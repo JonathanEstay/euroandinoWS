@@ -635,7 +635,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 	
 	
 	
-    <wsdl:portType name="panamericanaSoap">
+    <wsdl:portType name="euroandinoSoap">
 
         <wsdl:operation name="tomarEspaciosRQ">
             <wsdl:documentation xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'>
@@ -697,7 +697,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 	
 	
 	
-    <wsdl:binding name="panamericana" type="tns:panamericanaSoap">
+    <wsdl:binding name="euroandino" type="tns:euroandinoSoap">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
 
         <wsdl:operation name="tomarEspaciosRQ">
@@ -771,8 +771,8 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 	
 	
 	
-    <wsdl:service name="panamericana">
-        <wsdl:port name="panamericana" binding="tns:panamericana">
+    <wsdl:service name="euroandino">
+        <wsdl:port name="euroandino" binding="tns:euroandino">
             <soap:address location="http://oristest.euroandino.net/euroandinoWS/server/euroandino"/>
             <!-- <soap:address location="http://online.euroandino.net/euroandinoWS/server/euroandino"/> -->
         </wsdl:port>		

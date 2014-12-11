@@ -1,4 +1,8 @@
 $ cat .gitignore	
 application/Config.php
 nbproject/*
+
+
+#Ignorar documentacion
+_documentacion/
 *~

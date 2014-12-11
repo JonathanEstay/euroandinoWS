@@ -49,7 +49,7 @@ class metodosController extends Controller
         $bloqueos= $this->loadModel('bloqueos');
 
 
-        if($usuarioRQ=='panamericana' && $passwordRQ=='panaWS')
+        if($usuarioRQ=='euroandino' && $passwordRQ=='euroWS')
         {
             $var_getBloqueos= $bloqueos->getBloqueos($ciudad_RQ, $fechaIn_RQ, $fechaOut_RQ);
             if($var_getBloqueos==false)
@@ -166,7 +166,7 @@ class metodosController extends Controller
 
         $bloqueos= $this->loadModel('bloqueos');
         
-        if($usuarioRQ=='panamericana' && $passwordRQ=='panaWS')
+        if($usuarioRQ=='euroandino' && $passwordRQ=='euroWS')
         {
             $var_getDetalleProg= $bloqueos->exeSP($sql);
             if($var_getDetalleProg==false)
@@ -386,7 +386,7 @@ class metodosController extends Controller
         $usuarioRQ= trim($args["Credenciales"]->usuario);
         $passwordRQ= trim($args["Credenciales"]->password);
         
-        if($usuarioRQ=='panamericana' && $passwordRQ=='panaWS')
+        if($usuarioRQ=='euroandino' && $passwordRQ=='euroWS')
         {
             //Cargando el modelo usuarios
             $programas= $this->loadModel('programas');
@@ -585,7 +585,7 @@ class metodosController extends Controller
                                 $mail->Host = trim("190.196.23.232");
                                 $mail->Port = 25;
                                 $mail->From = 'panamericana@online.panamericanaturismo.cl';
-                                $mail->FromName = 'Panamericana Online';
+                                $mail->FromName = 'Euroandino Online';
                                 $mail->CharSet = 'UTF-8';
                                 $mail->Subject = 'Confirmacion de reserva online: '.$mC_TC_file;
                                 $mail->MsgHTML($mC_HTML);
